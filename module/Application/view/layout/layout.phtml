@@ -1,0 +1,26 @@
+<?= $this->doctype() ?>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?= $this->headTitle('CES Interview Project')->setSeparator(' - ')->setAutoEscape(false) ?>
+        <?= $this->headMeta()
+            ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+        <?= $this->headLink(['rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'])
+            ->prependStylesheet($this->basePath('css/jquery.mobile-1.4.5.min.css'))
+        ?>
+    </head>
+    <body>
+        <div data-role="page">
+          <div role="main" class="ui-content">
+            <?= $this->content ?>
+          </div>
+        </div>
+        <?= $this->inlineScript()
+            ->prependFile($this->basePath('js/scripts.js'))
+            ->prependFile($this->basePath('js/jquery.mobile-1.4.5.min.js'))
+            ->prependFile($this->basePath('js/jquery-1.11.1.min.js'))
+        ?>
+    </body>
+</html>

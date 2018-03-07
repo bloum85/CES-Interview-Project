@@ -1,0 +1,7 @@
+<ul data-role="listview">
+    <?php foreach($this->panels as $panel): ?><li><a href="#" data-id="<?= $panel['id'] ?>"><?= $panel['name'] ?></a></li><?php endforeach; ?>
+</ul>
+<div data-role="panel" id="panel" data-display="overlay" data-position="right">
+    <p></p>
+    <a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-right close-panel">Close</a>
+</div>
